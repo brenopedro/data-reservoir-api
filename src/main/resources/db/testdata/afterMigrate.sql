@@ -1,3 +1,5 @@
+lock tables cube_data write, drone_data write, rocket_data write;
+
 delete from cube_data;
 delete from drone_data;
 delete from rocket_data;
@@ -27,3 +29,5 @@ values (1, 11.11, 111.11, 111.11, 111.11, 111.11, 111.11, 111.11, 111.11, 111.11
 insert into rocket_data (id, acceleration, altitude, angular_speedx, angular_speedy, angular_speedz, euler_anglex, euler_angley, euler_anglez, external_temperature, linear_speedx, linear_speedy, linear_speedz,
                          magnetic_fieldx, magnetic_fieldy, magnetic_fieldz, position_gpsx, position_gpsy, position_gpsz, time_stamp_base, time_stamp_rocket, user)
 values (2, 22.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, 222.11, utc_timestamp, utc_timestamp,'admin-client');
+
+unlock tables;
